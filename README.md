@@ -5,4 +5,5 @@ We have heard many times about AI, IoT and Smart cities. But what if we want to 
 
 ## Requirements
 
-*[esp-idf](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#step-2-get-esp-idf)
+* [esp-idf](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#step-2-get-esp-idf) to build and flash the projects into ESP32
+* [esp32-camera lib](https://github.com/espressif/esp32-camera) to drive the camera of ESP32-CAM for AIcam and Autovelox
