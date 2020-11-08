@@ -20,3 +20,7 @@ IoTraffic is a smart city ecosystem based on tangle and artificial intelligence,
 * 2x[ESP32-CAM](https://banggood.app.link/unDr7fFKfbb) We will use 2 modules, one will be used as AI object detector, the second as autovelox
 * [FTDI232](https://it.aliexpress.com/item/33037470874.html) To flash the source code into esp32-cam
 * [ESP32-devkitC](https://www.mouser.it/ProductDetail/Espressif-Systems/ESP32-DevKitC-S1?qs=%2Fha2pyFaduifTIKK1pCXCmH3HrYUnhPj%2F%2FRqdKjyW8ui2J7Dyx2Ttw%3D%3D) To create the traffic light driver
+* [Traffic light](https://ebay.us/JGwnTe) or some leds to drive
+* A LiPo battery of 3.7V 650mAh or more
+* [75933](https://www.mouser.it/ProductDetail/Texas-Instruments/TPS75933KC?qs=6zVL%252ByCp0mp%2FfuY5MLXvjA%3D%3D) As LDO from Lipo battery to ESP32-devkitC 
+* [LiPo charger](https://www.adafruit.com/product/1904) to charge the lipo battery from USB without disconnecting from the board.
