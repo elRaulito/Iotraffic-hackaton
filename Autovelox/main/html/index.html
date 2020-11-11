@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <title>Autovelox IoTraffic</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="boot/css/bootstrap.min.css">
+  <script src="boot/jquery/jquery.min.js"></script>
+  <script src="boot/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {height: 550px}
+
+      /* Set gray background color and 100% height */
+      .sidenav {
+        background-color: #f1f1f1;
+        height: 100%;
+      }
+
+      /* On small screens, set height to 'auto' for the grid */
+      @media screen and (max-width: 767px) {
+        .row.content {height: auto;}
+      }
+
+      .navbar-custom {
+          background-color:#7DE38D;
+          color:#00242B;
+          border-radius:0;
+      }
+
+      .navbar-custom .navbar-nav > li > a {
+          color:#00242B;
+      }
+
+      .navbar-custom .navbar-nav > .active > a {
+          color: #00242B;
+          background-color:transparent;
+      }
+
+      .navbar-custom .navbar-nav > li > a:hover,
+      .navbar-custom .navbar-nav > li > a:focus,
+      .navbar-custom .navbar-nav > .active > a:hover,
+      .navbar-custom .navbar-nav > .active > a:focus,
+      .navbar-custom .navbar-nav > .open >a {
+          text-decoration: none;
+          background-color: #7DE38D;
+      }
+
+      .navbar-custom .navbar-brand {
+          color:#00242B;
+      }
+      .navbar-custom .navbar-toggle {
+          background-color:#00242B;
+      }
+      .navbar-custom .icon-bar {
+          background-color:#33aa33;
+      }
+
+  </style>
+
+  <style type="text/css">
+   body { background: #00242B !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+</style>
+</head>
+<body>
+<script>
+async function getSpeed() {
+  const result = await fetch("/api/speed");
+  const speed = await result.json();
+  console.log(speed);
+  console.log(speed.speed);
+  const el = document.getElementById("valueSpeed");
+  el.innerText=speed.speed+" cm/s";
+
+}
+setInterval(getSpeed, 300);
+
+
+async function update() {
+    var source = 'snapshot.jpg',
+        timestamp = (new Date()).getTime(),
+        newUrl = source + '?_=' + timestamp;
+    document.getElementById("cam").src = newUrl;
+}
+setInterval(update, 1000);
+
+</script>
+
+
+
+<nav class="navbar navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Autovelox IoTraffic</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Dashboard</a></li>
+        <li><a href="wifi.html">Wifi settings</a></li>
+        <li><a href="gateway.html">Gateway settings</a></li>
+        <li><a href="deviceid.html">Device ID settings</a></li>
+        <li><a href="limit.html">Speed limit settings</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div style="background:transparent !important" class="jumbotron center">
+  <div class="container text-center">
+    <img src="img/cover.png" class="img-responsive center" alt="cover">
+    <img id="cam" src="snapshot.jpg" class="img-responsive center" alt="snapshot">
+  </div>
+
+</div>
+<div class="col-md-4 text-center">
+  </div>
+  <div class="well col-md-4 text-center">
+    <p id="valueSpeed" class="h1 text-success">0 cm/s</p>
+    </div>
+    <div class="col-md-4 text-center">
+      </div>
+
+<div class="col-md-12 text-center">
+    <button id="singlebutton" name="singlebutton" class="btn btn-success" onclick="StartCamera()">Activate autovelox</button>
+</div>
+
+
+<script>
+
+async function StartCamera() {
+
+fetch("api/start");
+}
+
+</script>
+
+
+
+</body>
+</html>
