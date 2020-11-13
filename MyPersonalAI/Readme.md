@@ -20,6 +20,7 @@ The server is started listening on http://localhost:3000
 # How to make a request?
 
 You can select any image you want to test, encode it in base64 with tools like [this](https://base64.guru/converter/encode/image)
+Make the request using any device or Postman
 
 ```
 curl --location --request POST 'http://localhost:3000/image' \
