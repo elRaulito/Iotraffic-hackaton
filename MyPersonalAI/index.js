@@ -7,7 +7,8 @@ const mobilenet = require('@tensorflow-models/mobilenet');
 const cocoSsd = require('@tensorflow-models/coco-ssd');
 global.fetch = require('node-fetch');
 require('@tensorflow/tfjs-node')
-
+app.use(express.json({limit: '50mb'}));
+app.use(express.urlencoded({limit: '50mb'}));
 var jsonParser=bodyParser.json()
 
 const fs = require('fs');
@@ -43,19 +44,8 @@ const imageToInput = (image, numChannels) => {
   return input
 }
 
-const loadModel = async path => {
-  const mn = new mobilenet.MobileNet(1, 1);
-  await mn.load()
-  return mn
-}
 
 
-
-app.get("/url",jsonParser, (req, res, next) => {
- var contenuto=req.body;   
- console.log(contenuto);
- res.json(contenuto);
-});
 
 app.post("/image",jsonParser,async (req,res,next)=>{
   var image=req.body.immagine; 
