@@ -48,7 +48,7 @@ const imageToInput = (image, numChannels) => {
 
 
 app.post("/image",jsonParser,async (req,res,next)=>{
-  var image=req.body.immagine; 
+  var image=req.body.image; 
   image="data:image/jpeg;base64,"+image;
 
   ba64.writeImageSync("myimage", image);
