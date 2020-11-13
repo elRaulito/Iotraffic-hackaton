@@ -1,1 +1,1 @@
-##MyPersonalAI a Free object detector neural network
+## MyPersonalAI a Free object detector neural network
