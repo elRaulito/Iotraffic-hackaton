@@ -17,6 +17,48 @@ node index.js
 ```
 The server is started listening on http://localhost:3000
 
-#How to make a request?
+# How to make a request?
+
+You can select any image you want to test, encode it in base64 with tools like [this](https://base64.guru/converter/encode/image)
+
+```
+curl --location --request POST 'http://localhost:3000/image' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "image": "image encoded in base64 in plain text"
+}'
+
+```
+
+The response will look something like this:
 
 
+
+
+```
+[
+    {
+        "bbox": [
+            12.013011932373047,
+            28.14077541232109,
+            323.8699836730957,
+            224.03340235352516
+        ],
+        "class": "bicycle",
+        "score": 0.931533932685852
+    },
+    {
+        "bbox": [
+            73.09247589111328,
+            1.23288094997406,
+            176.43450164794922,
+            142.04309940338135
+        ],
+        "class": "person",
+        "score": 0.557381808757782
+    }
+]
+
+```
+
+The bbox is the square containing the object, the class is the object detected and the score is the probability of being correct
