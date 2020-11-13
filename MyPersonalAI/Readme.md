@@ -16,3 +16,7 @@ Now you can run the AI with the command
 node index.js
 ```
 The server is started listening on http://localhost:3000
+
+#How to make a request?
+
+
