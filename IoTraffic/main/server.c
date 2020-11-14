@@ -17,7 +17,6 @@
 #include "esp_http_server.h"
 #include "server.h"
 #include "cJSON.h"
-#include "esp_camera.h"
 
 
 #define TAG "server"
@@ -98,22 +97,6 @@ static esp_err_t on_url_hit(httpd_req_t *req)
         return ESP_OK;
     }
 
-    if (strcmp(req->uri, "/snapshot.jpg") == 0)
-    {
-
-        camera_fb_t * fb = esp_camera_fb_get();
-        if (!fb) {
-
-            return ESP_FAIL;
-            printf("error snapshot\n");
-        }
-    	httpd_resp_send(req,(char*)fb->buf,fb->len);
-
-    	printf("size=%d",imgSize);
-    	esp_camera_fb_return(fb);
-
-        return ESP_OK;
-    }
 
 
     if (strcmp(req->uri, "/gateway.html") == 0)
