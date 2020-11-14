@@ -49,8 +49,9 @@ const imageToInput = (image, numChannels) => {
 
 app.post("/image",jsonParser,async (req,res,next)=>{
   var image=req.body.image; 
+  //console.log( req.body);
   image="data:image/jpeg;base64,"+image;
-
+  
   ba64.writeImageSync("myimage", image);
 
   const value = readImage("myimage.jpeg")
@@ -59,9 +60,15 @@ app.post("/image",jsonParser,async (req,res,next)=>{
   const model= await cocoSsd.load()
   const predictions = await model.detect(input)
 
-  //console.log('classification results:', predictions)
+  console.log('classification results:', predictions)
   
-    res.json(predictions);
+    
+    //res.status(201).send(predictions);
+res.set({
+  'Content-Type': 'text/html; charset=utf-8',
+   'Connection' :'keep-alive' 
+})    
+res.json(predictions);
 });
          
 
