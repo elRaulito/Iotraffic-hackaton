@@ -108,7 +108,7 @@ void onGotData(char *data){
 
 	int flagIota=0;
 	int flagTangle=0;
-
+  accidents=0;
 	cJSON *payload= cJSON_Parse(data);
 
 	int size=0;
@@ -124,7 +124,7 @@ void onGotData(char *data){
 
     cJSON *dataCars=cJSON_GetObjectItem(cJSON_GetArrayItem(tangle,1),"data");
     cJSON *number=cJSON_GetObjectItem(cJSON_GetArrayItem(dataCars,0),"cars");
-    cJSON *numberAccidents=cJSON_GetObjectItem(cJSON_GetArrayItem(dataCars,0),"accidents");
+    cJSON *numberAccidents=cJSON_GetObjectItem(cJSON_GetArrayItem(dataCars,0),"Pedestrians");//we will detect the persons and use their presence as accidents detection because the AI does not recognize toys accidents
 
     if((strstr(name->valuestring,"Iota")!=NULL)&&(flagIota==0)){
     	carsIota=atoi(number->valuestring);
@@ -134,7 +134,7 @@ void onGotData(char *data){
 
     if((strstr(name->valuestring,"Tangle")!=NULL)&&(flagTangle==0)){
     	carsTangle=atoi(number->valuestring);
-    	accidents=atoi(numberAccidents->valuestring);
+    	accidents+=atoi(numberAccidents->valuestring);
     	flagTangle=1;
     }
 
