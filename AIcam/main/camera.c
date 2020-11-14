@@ -84,7 +84,7 @@ void camera_start(){
         .ledc_timer     = LEDC_TIMER_0,
         .ledc_channel   = LEDC_CHANNEL_0,
         .pixel_format   = PIXFORMAT_JPEG,
-        .frame_size     = FRAMESIZE_HVGA,//YOU CAN CHANGE THE SIZE OF THE FRAME FROM HERE
+        .frame_size     = FRAMESIZE_VGA,//YOU CAN CHANGE THE SIZE OF THE FRAME FROM HERE
         .jpeg_quality   = 10,
         .fb_count       = 2
     };

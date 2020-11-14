@@ -12,8 +12,8 @@
 #include "camera.h"
 #include "esp_wifi.h"
 
-char startBody[]="{\"requests\": [{\"image\": {\"content\": \"";
-char endBody[]="\"},\"features\": [{\"type\": \"OBJECT_LOCALIZATION\"}]}]}";
+char startBody[]="{\"image\": \"";
+char endBody[]="\"}";
 char startTangleBody[]="{\"iot2tangle\": [ { \"sensor\":\"Address\", \"data\": [ { \"name\": \"Tangle 2 Street\" } ] } ,{\"sensor\": \"Camera\",\"data\":[{\"cars\":";
 char midTangleBody[]="}]}], \"device\": \"";
 char endTangleBody[]="\", \"timestamp\": 0  }";
@@ -44,12 +44,12 @@ int flagAnimal,flagScooter,flagBike,flagPerson;
  void onGotData(char* data){
 
     carNumber=getItems(data,"vehicle");//this line detectes toy vehicles
-    carNumber+=getItems(data,"Car");
-    personNumber=getItems(data,"Person");
-    animalNumber=getItems(data,"Animal");
-    scooterNumber=getItems(data,"Scooter");
-    bikeNumber=getItems(data,"Bicycle");
-    accidentsNumber=getItems(data,"Wheelchair");
+    carNumber+=getItems(data,"car");
+    personNumber=getItems(data,"person");
+    animalNumber=getItems(data,"animal");
+    scooterNumber=getItems(data,"scooter");
+    bikeNumber=getItems(data,"bicycle");
+    accidentsNumber=getItems(data,"wheelchair");
 
 
     printf("There are %d cars\n",carNumber);
@@ -76,7 +76,7 @@ void ShootTask(void* params){
 
 			 Header hostAIHeader={
 				 .key="Host",
-				 .value="vision.googleapis.com"
+				 .value=apikeyNVS
 			 };
 
 
@@ -91,7 +91,7 @@ void ShootTask(void* params){
 
 			 AIparams.header[2]=typeHeader;
 
-			 char bodyNew[40000];
+			 char bodyNew[80000];
 			 strcpy(bodyNew,startBody);
 			 strcat(bodyNew,(char*)buffer);
 			 strcat(bodyNew,endBody);
@@ -108,8 +108,10 @@ void ShootTask(void* params){
 			 AIparams.header[1]=lenghtAIHeader;
 
 			 char request[500];
-			 strcpy(request,"https://vision.googleapis.com/v1/images:annotate?key=");
-			 strcat(request,apikeyNVS);
+			 strcpy(request,apikeyNVS);
+       strcat(request,"/image");
+			 //strcat(request,apikeyNVS);
+       printf("request=%s\n",request);
 			 fetch(request,&AIparams);
 
 

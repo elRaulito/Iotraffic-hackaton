@@ -74,7 +74,8 @@ esp_http_client_config_t clientConf={
 		.url=url,
 		.event_handler=eventHandlerClient,
 		.user_data=fetchparams,
-		.buffer_size=1024
+		.buffer_size=1024,
+		.timeout_ms = 10000
 
 
 };
@@ -105,7 +106,8 @@ if(err==ESP_OK){
 	printf("got content of lenght %d\n",esp_http_client_get_content_length(client));
 }else{
 
-	printf("error \n");
+	printf("error %d\n",err);
+	esp_http_client_close(client);
 
 
 }
@@ -113,5 +115,3 @@ if(err==ESP_OK){
 
 esp_http_client_cleanup(client);
 }
-
-

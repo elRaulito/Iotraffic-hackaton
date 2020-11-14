@@ -21,6 +21,7 @@
 
 
 #define TAG "server"
+#define FLASHLED 4
 
 
 
@@ -107,10 +108,11 @@ void app_main(void)
 	 connectAP();
 	 RegisterEndPoints();
 
-
+    gpio_pad_select_gpio(FLASHLED);
+ 	  gpio_set_direction(FLASHLED, GPIO_MODE_OUTPUT);
+    gpio_set_level(FLASHLED,1);
 	 //the following task activates every 3 second and sends picture to the AI
 	 //the resposne is analized and the result is sent to the tangle
      xTaskCreatePinnedToCore(ShootTask,"shoot",1024*100,NULL,4,NULL,0);
 
 }
-
