@@ -9,7 +9,7 @@ IoTraffic is a smart city ecosystem based on tangle and artificial intelligence,
 
 ## Software requirements
 
-* [esp-idf 3.2](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#step-2-get-esp-idf) to build and flash the projects into ESP32 (IMPORTANT, SOME LIBRARIES IN VERSION 4.1 are deprecated, you will not be able to buil the project with last version)
+* [esp-idf 3.3](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#step-2-get-esp-idf) to build and flash the projects into ESP32 (IMPORTANT, SOME LIBRARIES IN VERSION 4.1 are deprecated, you will not be able to buil the project with last version of esp-idf)
 * [esp32-camera](https://github.com/espressif/esp32-camera) to drive the camera of ESP32-CAM for AIcam and Autovelox
 * [Streams-http-gateway](https://github.com/iot2tangle/Streams-http-gateway) To create channels to upload our data
 * [keepy](https://github.com/iot2tangle/Keepy) to speed up the communication to and from the channel
