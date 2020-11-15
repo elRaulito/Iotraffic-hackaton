@@ -13,7 +13,8 @@ IoTraffic is a smart city ecosystem based on tangle and artificial intelligence,
 * [esp32-camera](https://github.com/espressif/esp32-camera) to drive the camera of ESP32-CAM for AIcam and Autovelox
 * [Streams-http-gateway](https://github.com/iot2tangle/Streams-http-gateway) To create channels to upload our data
 * [keepy](https://github.com/iot2tangle/Keepy) to speed up the communication to and from the channel
-* [Google Cloud vision](https://cloud.google.com/vision/docs/setup) The artificial intelligence that recognize the objects is based on Google Cloud vision, therefore you will need an api key
+* ~~  [Google Cloud vision](https://cloud.google.com/vision/docs/setup) The artificial intelligence that recognize the objects is based on Google Cloud vision, therefore you will need an api key~~ (No more needed thanks to MypersonalAI)
+* [MyPersonalAI](https://github.com/elRaulito/Iotraffic-hackaton/tree/main/MyPersonalAI) A neural network working in node.js listening on port 3000 to detect objects in images that are sent to it.
 
 ## Bill of materials
 
