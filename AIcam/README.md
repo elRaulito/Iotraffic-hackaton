@@ -27,4 +27,21 @@ Press the reset button on esp32-cam and run the command
 idf.py flash
 
 ```
+# The software environment
 
+Before using our cam we should run an istance of Keepy, Streams-http-gateway and MyPersonalAI.
+The cam will send images to myPersonalAi and the response will be analized by esp32, the useful information will be sent to Keepy that will send the information to Streams-http-gateway therefore the information will appear on the channel of the Tangle.
+
+# Running the program
+
+To use the cam the connection may be just the power supply, therefore like the following
+| ESP32-CAM GPIO| FTDI232 |
+| ------------- | ------------- |
+| 3V3           | VCC           |
+| GND           | GND           |
+
+![connectionWorking](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/images/AI/working.jpg?raw=true)
+
+Press the reset button and the camera will start!
+
+# Configuration
