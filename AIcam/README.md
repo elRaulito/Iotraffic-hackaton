@@ -53,13 +53,23 @@ This page will appear:
 
 Before pressing Activate camera let's configure all the parameters (**parameters are stored in Not volatile storage of ESP32 therefore you need to set everything only the first time**), 
 like the wifi
+
 ![wifi](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/AIcam/AI-dash/wifi.PNG?raw=true)
+
 the address and the port of Keepy
+
 ![keepy](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/AIcam/AI-dash/keepy.PNG?raw=true)
+
 the address and the port of myPersonalAI
+
 ![AI](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/AIcam/AI-dash/AIport.PNG?raw=true)
+
 the device ID in the whitelist in config.json of streams-http-gateway
+
 ![device](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/AIcam/AI-dash/device.PNG?raw=true)
+
 The objects that i want to detect and pubblish on the tangle
+
 ![detection](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/AIcam/AI-dash/detection.PNG?raw=true)
+
 Now just press **activate camera** and your camera will start to pubblish detected objects on the Tangle.
