@@ -25,3 +25,4 @@ IoTraffic is a smart city ecosystem based on tangle and artificial intelligence,
 * A LiPo battery of 3.7V 650mAh or more
 * [75933](https://www.mouser.it/ProductDetail/Texas-Instruments/TPS75933KC?qs=6zVL%252ByCp0mp%2FfuY5MLXvjA%3D%3D) As LDO from Lipo battery to ESP32-devkitC 
 * [LiPo charger](https://www.adafruit.com/product/1904) to charge the lipo battery from USB without disconnecting from the board.
+* [HCSR-04](https://www.mouser.it/ProductDetail/OSEPP-Electronics/HC-SR04?qs=wNBL%252BABd93PqZEhuhHkuOw==&vip=1&gclid=Cj0KCQiAwMP9BRCzARIsAPWTJ_Gt9pzniKUyhvmVTh6iJucvYOdlv3uCE02es0e44awKTKKJIK6dOqsaArqEEALw_wcB) As ultrasonic sensor to detect speed of cars
