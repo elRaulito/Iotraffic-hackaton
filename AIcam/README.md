@@ -46,6 +46,6 @@ Press the reset button and the camera will start!
 
 # Configuration
 
-When the esp32-cam turns on it will generate its own wifi, the name is **IoTrafficCam** and the password is **12345678**, after connecting
+When the esp32-cam turns on it will generate its own wifi, the name is **CameraIoTraffic** and the password is **12345678**, after connecting
 open a browser and go to the page http://192.168.1.1 
 This page will appear:
