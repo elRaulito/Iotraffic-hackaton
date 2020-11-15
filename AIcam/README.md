@@ -11,7 +11,7 @@ idf.py all
 
 Now the project should be built and you are ready to flash it.
 Connect the esp32-cam as follows with FTDI232
-[connection](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/images/AI/programming.jpg)
+[connection](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/images/AI/programming.jpg?raw=true)
 
 Press the reset button on esp32-cam and run the command 
 
