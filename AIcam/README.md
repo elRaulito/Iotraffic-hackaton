@@ -49,3 +49,17 @@ Press the reset button and the camera will start!
 When the esp32-cam turns on it will generate its own wifi, the name is **CameraIoTraffic** and the password is **12345678**, after connecting
 open a browser and go to the page http://192.168.1.1 
 This page will appear:
+![dashboard](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/AIcam/AI-dash/dash.PNG?raw=true)
+
+Before pressing Activate camera let's configure all the parameters (**parameters are stored in Not volatile storage of ESP32 therefore you need to set everything only the first time**), 
+like the wifi
+![wifi](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/AIcam/AI-dash/wifi.PNG?raw=true)
+the address and the port of Keepy
+![keepy](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/AIcam/AI-dash/keepy.PNG?raw=true)
+the address and the port of myPersonalAI
+![AI](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/AIcam/AI-dash/AIport.PNG?raw=true)
+the device ID in the whitelist in config.json of streams-http-gateway
+![device](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/AIcam/AI-dash/device.PNG?raw=true)
+The objects that i want to detect and pubblish on the tangle
+![detection](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/AIcam/AI-dash/detection.PNG?raw=true)
+Now just press **activate camera** and your camera will start to pubblish detected objects on the Tangle.
