@@ -15,6 +15,10 @@ Connect the esp32-cam as follows with FTDI232
 | ------------- | ------------- |
 | 3V3           | VCC           |
 | GND           | GND           |
+| V0R           | TX           |
+| V0T           | RX           |
+| IO0 with GND   |  --          |
+
 ![connection](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/images/AI/programming.jpg?raw=true)
 
 Press the reset button on esp32-cam and run the command 
