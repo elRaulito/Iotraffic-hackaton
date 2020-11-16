@@ -3,9 +3,9 @@
 ## Introduction
 We have heard many times about AI, IoT and Smart cities. But what if we want to put into practice theory and connect AI to the city thanks to the Tangle. That's how IoTraffic was created.
 IoTraffic is a smart city ecosystem based on tangle and artificial intelligence, the components of this ecosystem are:
-* AIcam, a board capable of detecting cars, pedestrians, accidents and more and pubblish the data on the tangle
-* SmartTrafficLight, a traffic light that changes its timing according to the data on the tangle
-* Autovelox, a speed detector that takes a picture of the car and post it on the tangle
+* [AIcam](https://github.com/elRaulito/Iotraffic-hackaton/tree/main/AIcam), a board capable of detecting cars, pedestrians, accidents and more and pubblish the data on the tangle
+* [SmartTrafficLight](https://github.com/elRaulito/Iotraffic-hackaton/tree/main/IoTraffic), a traffic light that changes its timing according to the data on the tangle
+* [Autovelox](https://github.com/elRaulito/Iotraffic-hackaton/tree/main/Autovelox), a speed detector that takes a picture of the car and post it on the tangle
 
 ## Software requirements
 
