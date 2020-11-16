@@ -1,4 +1,5 @@
 ## AIcam
+![Aicam](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/images/Pictures/camera.jpg?raw=true)
 
 This project is a camera detection object based on AI, the object detected are sent to a channel on the Tangle.
 
