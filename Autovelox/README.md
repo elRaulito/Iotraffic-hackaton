@@ -34,7 +34,7 @@ idf.py flash
 Before using our cam we should run an istance of Keepy, Streams-http-gateway.
 The cam will send images to keepy encoded in base64, keepy will send the information to Streams-http-gateway therefore the data will appear on the channel of the Tangle.
 
-# Runnin the program
+# Running the program
 
 To use the autovelox connect the ultrasonic sensor and the camera, to the power supply. We will use some resistances to protect the esp32-cam,
 the ultrasonic sensor has a 5V voltage range while esp32 has 3.3V, we need to protect esp32 from the echo signal. Before connecting the FTDI232 change the output voltage to 5V.
@@ -53,4 +53,29 @@ the ultrasonic sensor has a 5V voltage range while esp32 has 3.3V, we need to pr
 
 ![](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/images/Autovelox/autovelox_bb.jpg)
 
+Connect ftdi232 to an USB port and the autovelox will turn on.
 
+# Configuration
+
+When the esp32-cam turns on it will generate its own wifi, the name is **AutoveloxIoTraffic** and the password is 12345678, after connecting open a browser and go to the page http://192.168.1.1 This page will appear:
+
+![dashboard](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/Autovelox/Autovelox-dash/dash.PNG?raw=true)
+
+Before pressing Activate camera let's configure all the parameters (**parameters are stored in Not volatile storage of ESP32 therefore you need to set everything only the first time**), 
+like the wifi
+
+![wifi](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/Autovelox/Autovelox-dash/wifi.PNG?raw=true)
+
+the address and the port of Keepy
+
+![keepy](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/Autovelox/Autovelox-dash/keepy.PNG?raw=true)
+
+the device ID in the whitelist in config.json of streams-http-gateway
+
+![device](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/Autovelox/Autovelox-dash/device.PNG?raw=true)
+
+The speed limit that I want to set as threeshold
+
+![detection](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/Autovelox/Autovelox-dash/speed.PNG?raw=true)
+
+Now just press **activate autovelox** in the homepage and your camera will start to pubblish pictures on the Tangle.
