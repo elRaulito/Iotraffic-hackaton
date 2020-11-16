@@ -33,3 +33,24 @@ idf.py flash
 
 Before using our cam we should run an istance of Keepy, Streams-http-gateway.
 The cam will send images to keepy encoded in base64, keepy will send the information to Streams-http-gateway therefore the data will appear on the channel of the Tangle.
+
+# Runnin the program
+
+To use the autovelox connect the ultrasonic sensor and the camera, to the power supply. We will use some resistances to protect the esp32-cam,
+the ultrasonic sensor has a 5V voltage range while esp32 has 3.3V, we need to protect esp32 from the echo signal. Before connecting the FTDI232 change the output voltage to 5V.
+
+| ESP32-CAM GPIO| FTDI232 |
+| ------------- | ------------- |
+| 5V          | VCC           |
+| GND           | GND           |
+
+| ESP32-CAM GPIO| HCSR-04 |
+| ------------- | ------------- |
+| 5V          | VCC           |
+| GND           | GND           |
+| IO2          | ECHO          |
+| IO12           | TRIG           |
+
+![](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/images/Autovelox/autovelox_bb.jpg)
+
+
