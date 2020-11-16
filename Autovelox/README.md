@@ -1,5 +1,5 @@
 ## Autovelox
-![autovelox](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/images/Pictures/autovelox.jpg?raw=true&s=50)
+![autovelox](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/images/Pictures/autovelox.jpg?s=50)
 
 This is the source code of a speed limit detector, when an object gets closer to the camera with a speed higher than the treeshold the camera takes a picture.
 The picture is then uploaded to the Tangle with the information regarding the speed, the limit speed and the fine to pay.
