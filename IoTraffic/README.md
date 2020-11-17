@@ -22,3 +22,20 @@ The traffic light will fetch the information from Keepy and retrieve the informa
 # Configuration
 
 When the esp32-cam turns on it will generate its own wifi, the name is **TrafficLightIoTraffic** and the password is 12345678, after connecting open a browser and go to the page http://192.168.1.1 This page will appear:
+
+![dashboard](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/IoTraffic/IoTraffic-dash/dash.JPG?raw=true)
+
+Before pressing Activate traffic light let's configure all the parameters (**parameters are stored in Not volatile storage of ESP32 therefore you need to set everything only the first time**), 
+like the wifi
+
+![wifi](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/IoTraffic/IoTraffic-dash/wifi.JPG?raw=true)
+
+the address and the port of Keepy
+
+![keepy](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/IoTraffic/IoTraffic-dash/keepy.JPG?raw=true)
+
+The channel from which read the data, in this way the traffic light will read only the data that are correctly written into the tangle
+
+![detection](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/IoTraffic/IoTraffic-dash/channel.JPG?raw=true)
+
+Now just press **activate traffic light** in the homepage and your hub will start to change the timing according to the data in the channel.
