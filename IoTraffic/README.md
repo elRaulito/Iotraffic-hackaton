@@ -27,12 +27,12 @@ The connections of this device are the following
 | TPS75933 | Board |
 |----------|-------|
 | EN       | GND   |
-| IN       | Battery+|
+| IN       | Battery+ from 1904|
 |GND       | GND    |
 |OUT |3.3V|
 |FB/PG|NOT CONNECT|
 
-
+Pay attention to the optocoupler polarity
 
 
 # The software environment
