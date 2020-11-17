@@ -25,7 +25,7 @@ The LDO TPS75933 is a 3.3V regulator with a very small voltage drop and power co
 The connections of this device are the following
 
 | TPS75933 | Board |
---------------------
+|----------|-------|
 | EN       | GND   |
 | IN       | Battery+|
 |GND       | GND    |
