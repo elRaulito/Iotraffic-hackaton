@@ -72,6 +72,7 @@ When the esp32-cam turns on it will generate its own wifi, the name is **Traffic
 
 ![dashboard](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/IoTraffic/IoTraffic-dash/dash.JPG?raw=true)
 
+It is possible to change the timing of the traffic light with te touch bar shown.
 Before pressing Activate traffic light let's configure all the parameters (**parameters are stored in Not volatile storage of ESP32 therefore you need to set everything only the first time**), 
 like the wifi
 
