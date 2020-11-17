@@ -1,6 +1,8 @@
 # IoTraffic-hackaton
 ![cover](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/images/cover.png?raw=true)
 ## Introduction
+(**FOR A DETAILED GUIDE AND DESCRIPTION CHECK THE [WIKI](https://github.com/elRaulito/Iotraffic-hackaton/wiki)**)
+
 We have heard many times about AI, IoT and Smart cities. But what if we want to put into practice theory and connect AI to the city thanks to the Tangle. That's how IoTraffic was created.
 IoTraffic is a smart city ecosystem based on tangle and artificial intelligence, the components of this ecosystem are:
 * [AIcam](https://github.com/elRaulito/Iotraffic-hackaton/tree/main/AIcam), a board based on esp32 capable of detecting cars, pedestrians, accidents and more and pubblish the data on the tangle
