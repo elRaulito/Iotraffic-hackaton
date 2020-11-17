@@ -24,7 +24,7 @@ The LiPo charger will help you to charge the battery without removing it from th
 The LDO TPS75933 is a 3.3V regulator with a very small voltage drop and power consumption. In this way even if the battery is discharging the 3.3V will be constant.
 The connections of this device are the following
 
-| TPS75933 | Board |
+| TPS75933 | System |
 |----------|-------|
 | EN       | GND   |
 | IN       | Battery+ from 1904|
@@ -33,6 +33,33 @@ The connections of this device are the following
 |FB/PG|NOT CONNECT|
 
 Pay attention to the optocoupler polarity
+| TLP621 | System |
+|----------|-------|
+| 1       | GPIO23 ESP32 |
+| 2       | GND with a 1k resistor|
+|3      | JQC3F-03VDC Coil+ |
+|4 |3.3V|
+
+The relay should be conencted in this way:
+
+| JQC3F-03VDC | System |
+|----------|-------|
+| JQC3F-03VDC Coil+       | pin 3 of optocoupler |
+| JQC3F-03VDC Coil-     | GND |
+|COM      | connect before the switch of the device to turn on |
+|NO |connect after the switch of the device to turn on |
+
+Traffic lights
+| ESP32 pin | LED |
+|----------|-------|
+| 4       | Green1 anode|
+| 15       | Red1 anode|
+|2      | Yellow1 anode|
+|16 |Green2 anode|
+|5 |Red2 anode|
+|17 |Yellow2 anode|
+
+Use 20 ohm for yellow and green and 100 ohm for red leds.
 
 
 # The software environment
