@@ -14,6 +14,15 @@ Now the project should be built and you are ready to flash it. Connect the esp32
 ```
 idf.py flash 
 ```
+# Hardware configuration
+![connection](https://github.com/elRaulito/Iotraffic-hackaton/blob/main/images/Traffic/trafficlight_bb.png?raw=true)
+
+Bleeding resistors for leds should be evaluated according to your leds, usually RED LEDS have a smaller forward voltage therefore they need a higher resistor.
+The optocoupler is used in order to supply the turn on current not from the GPIO of esp32 but from the 3.3V.
+Any item/toy or device can be turned on with the relay if it has a switch (even if it does not), just place the relay in parallel with the switch.
+The LiPo charger will help you to charge the battery without removing it from the board.
+
+
 
 # The software environment
 
