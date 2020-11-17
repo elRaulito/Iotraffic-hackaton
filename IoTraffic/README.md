@@ -21,6 +21,17 @@ Bleeding resistors for leds should be evaluated according to your leds, usually 
 The optocoupler is used in order to supply the turn on current not from the GPIO of esp32 but from the 3.3V.
 Any item/toy or device can be turned on with the relay if it has a switch (even if it does not), just place the relay in parallel with the switch.
 The LiPo charger will help you to charge the battery without removing it from the board.
+The LDO TPS75933 is a 3.3V regulator with a very small voltage drop and power consumption. In this way even if the battery is discharging the 3.3V will be constant.
+The connections of this device are the following
+
+| TPS75933 | Board |
+--------------------
+| EN       | GND   |
+| IN       | Battery+|
+|GND       | GND    |
+|OUT |3.3V|
+|FB/PG|NOT CONNECT|
+
 
 
 
