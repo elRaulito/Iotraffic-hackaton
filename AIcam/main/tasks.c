@@ -108,10 +108,11 @@ void ShootTask(void* params){
 			 AIparams.header[1]=lenghtAIHeader;
 
 			 char request[500];
-			 strcpy(request,apikeyNVS);
-       strcat(request,"/image");
+			 strcpy(request,"http://");
+			 strcat(request,apikeyNVS);
+                         strcat(request,"/image");
 			 //strcat(request,apikeyNVS);
-       printf("request=%s\n",request);
+                         printf("request=%s\n",request);
 			 fetch(request,&AIparams);
 
 
